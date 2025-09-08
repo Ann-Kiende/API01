@@ -1,11 +1,15 @@
-// src/App.jsx
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
 
 export default function App() {
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', padding: '2rem' }}>
-      <h1>Hello React + Vite!</h1>
-      <p>If you see this, React is working.</p>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+      </Routes>
+    </Router>
   );
 }
