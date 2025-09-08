@@ -5,7 +5,7 @@ import Register from './components/Register';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename='/API01/'>
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/register' element={<Register />} />

@@ -3,6 +3,11 @@ import './styles.css';
 import { Link, NavLink } from 'react-router-dom';
 
 const Login = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    //Handle login logic here
+    localStorage.setItem('isLoggedIn', 'true');
+  };
   return (
     <div className='login-container'>
       <h2 className='login-title'>Login</h2>
